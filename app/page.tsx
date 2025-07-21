@@ -8,20 +8,9 @@ export default async function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 flex flex-col items-center py-12 px-4">
       <div className="w-full max-w-3xl">
-        <div className="relative bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl p-10 border border-slate-200 mb-10 overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none">
-            <svg width="100%" height="100%" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-              <ellipse cx="200" cy="60" rx="180" ry="40" fill="url(#grad1)" fillOpacity="0.15" />
-              <defs>
-                <linearGradient id="grad1" x1="0" y1="0" x2="400" y2="120" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#6366f1" />
-                  <stop offset="1" stopColor="#a78bfa" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <h1 className="text-5xl font-extrabold mb-4 tracking-tight drop-shadow text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">AI Portfolio</h1>
-          <p className="mb-8 text-xl text-slate-700 text-center animate-fadein">Explore my <span className="font-semibold text-indigo-500">AI projects</span> below:</p>
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-slate-200 mb-10 text-center">
+          <h1 className="text-4xl font-bold text-slate-900 mb-3">AI Portfolio</h1>
+          <p className="text-lg text-slate-600">AI Stuff Worked on.</p>
         </div>
         <ul className="flex flex-col gap-8">
           {projects.map((project) => (
@@ -50,6 +39,9 @@ export default async function Home() {
                 )}
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-slate-900 mb-1">{project.title}</h2>
+                  {project.date && (
+                    <div className="text-xs text-slate-400 mb-1">{new Date(project.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long' })}</div>
+                  )}
                   <p className="text-slate-600 italic mb-2">{project.description}</p>
                 </div>
               </Link>

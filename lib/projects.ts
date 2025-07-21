@@ -20,7 +20,7 @@ export async function getAllProjects(): Promise<Project[]> {
     {
       slug: "ai-agent-from-scratch",
       title: "Build an AI Agent from Scratch",
-      description: "Create your own AI agent! Build a command line messaging interface and an agent loop to continuously interact with the user. Code tools from scratch for retrieving information and generating images from Dall-E. Manage the chat history to provide context with each prompt. Learn the bleeding-edge design patterns and resources for building modern agent-based API apps.",
+      description: "Built a CLI agent that interacts with users, retrieves info, generates Dall-E images, manages chat history, and demonstrates modern agent-based API design.",
     //   image: "/file.svg",
       content: `
         <h2 class="text-2xl font-bold mb-2">Developing Basic AI Agents for Learning and Experimentation</h2>
