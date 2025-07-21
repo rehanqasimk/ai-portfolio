@@ -17,6 +17,26 @@ export async function getAllProjects(): Promise<Project[]> {
   // Example implementation
   // Could be from a CMS, database, or local files
   return [
+
+      {
+      slug: "ai-agent-from-prototype-to-production",
+      title: "AI Agent: From Prototype to Production",
+      description: "Built reliable AI apps with RAG pipelines, evals, structured outputs, and human-in-the-loop guardrails—while managing cost and context efficiently.",
+    //   image: "/file.svg",
+     content: `
+        <h2 class="text-2xl font-bold mb-2">AI Agent Application with RAG and Tool Integration</h2>
+        <ul class="list-disc ml-6 mb-4">
+          <li>Creating advanced AI agents for practical applications</li>
+          <li>Built a TypeScript AI agent with OpenAI integration, retrieval-augmented generation, and persistent memory</li>
+          <li>Implemented dynamic tool execution framework, CLI interface, and React dashboard with Vite</li>
+          <li>Integrated vector database for document retrieval and created comprehensive evaluation system</li>
+        </ul>
+        <p>This project demonstrates the development of a robust AI agent system, combining modern LLMs, RAG pipelines, tool integration, and user interfaces for real-world use cases.</p>
+      `,
+      technologies: ["TypeScript", "OpenAI Chat Completion", "AI Agents", "LLMs"],
+      github: "https://github.com/rehanqasimk/agents-production-frontend-masters-workshop",
+      date: "May, 2025"
+    },
     {
       slug: "ai-agent-from-scratch",
       title: "Build an AI Agent from Scratch",
